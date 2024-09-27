@@ -86,7 +86,7 @@
     </div>
     <div class="linha">
       <span id="emoji9">✔️</span> Solução final e/ou próximas etapas:
-      <textarea id="solucaoProximasEtapas" class="bloco-notas">- Sem dúvida, cx agradece e encerra.</textarea>
+      <textarea id="solucaoProximasEtapas" class="bloco-notas"></textarea>
     </div>
     <div class="linha" id="linhaIKAs">
       <span id="emoji10">📁</span> IKAs utilizados:
@@ -134,7 +134,7 @@ Valor cobrado: R$ </textarea>
     </div>
     <div class="linha">
       <span id="emoji16">🗣</span> Feedback do cliente:
-      <textarea id="feedbackCliente" class="bloco-notas">Sem indício de feedback.</textarea>
+      <textarea id="feedbackCliente" class="bloco-notas"></textarea>
     </div>
     <div class="linha" id="linhaObservacao">
       <span id="emoji17">👀</span> Observação:
@@ -183,6 +183,10 @@ Valor cobrado: R$ </textarea>
         var naoAplicavelContato = document.getElementById('naoAplicavelContato').checked;
         if (!naoAplicavelContato) {
           textoFinal += adicionarEmoji("🤔") + " Quem está entrando em contato: " + document.getElementById('Contato').value + "\n\n";
+        }
+        var naoAplicavelEmail = document.getElementById('naoAplicavelEmail').checked;
+        if (!naoAplicavelEmail) {
+          textoFinal += adicionarEmoji("📧") + " E-mails fornecidos pelo cliente: " + document.getElementById('emailCliente').value + "\n\n";
         }
         textoFinal += adicionarEmoji("💻") + " Dispositivos utilizados: " + document.getElementById('dispositivosUtilizados').value + "\n\n";
         var naoAplicavelTelefone = document.getElementById('naoAplicavelTelefone').checked;
